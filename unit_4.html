@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="icon.ico" rel="shortcut icon">
+
+    <title>Totem</title>
+    <style>
+      ::-webkit-scrollbar { 
+        display: none;
+      }
+    </style>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+
+  </head>
+
+<body>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo">
+                      </a>
+                      <ul class="nav">
+                          <a href="index.html" class="active" target="_self"><h4>HOME</h4><h6> </h6></a>
+                                 
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Main Area ***** -->
+  <div class="box-wrap">
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6>units</h6>
+            <h4>Unit <em>4</em>
+            <a href="#video">
+            <h4>Video & Answers</h4><h6>Click me!</h6>
+            </a>
+            <!--Import the textbook-->
+            <div>
+              <iframe src="rec/book/0053.xhtml" width=815.80, height=1043.74 scrolling="no"></iframe>
+              <iframe src="rec/book/0054.xhtml" width=815.80, height=1043.74 scrolling="no"></iframe>
+              <iframe src="rec/book/0055.xhtml" width=815.80, height=1043.74 scrolling="no"></iframe>
+              <iframe src="rec/book/0056.xhtml" width=815.80, height=1043.74 scrolling="no"></iframe>
+              <iframe src="rec/book/0057.xhtml" width=815.80, height=1043.74 scrolling="no"></iframe>
+              <iframe src="rec/book/0058.xhtml" width=815.80, height=1043.74 scrolling="no"></iframe>
+              <iframe src="rec/book/0059.xhtml" width=815.80, height=1043.74 scrolling="no"></iframe>
+              <iframe src="rec/book/0060.xhtml" width=815.80, height=1043.74 scrolling="no"></iframe>
+              <iframe src="rec/book/0061.xhtml" width=815.80, height=1043.74 scrolling="no"></iframe>
+              <iframe src="rec/book/0062.xhtml" width=815.80, height=1043.74 scrolling="no"></iframe>
+              <iframe src="rec/book/0063.xhtml" width=815.80, height=1043.74 scrolling="no"></iframe>
+              <iframe src="rec/book/0064.xhtml" width=815.80, height=1043.74 scrolling="no"></iframe>
+              <iframe src="rec/book/0065.xhtml" width=815.80, height=1043.74 scrolling="no"></iframe>
+              <iframe src="rec/book/0066.xhtml" width=815.80, height=1043.74 scrolling="no"></iframe>
+
+            </div>
+            <!--video part-->
+            <a name="video"></a>
+              <h6>video</h6>
+              <h4>Watch the<em>Video</em><br>
+              <video width="640" height="480" controls="controls">
+                <source src="rec/vid/unit_4.mp4" type="video/mp4" />
+                If you cant watch the video, congratulations you found a bug
+              </video>
+          </div>
+          <!--Answer Part-->
+          <div>
+          <details>
+            <summary>Show the video answers</summary>
+            <iframe src="rec/answer/unit_4.pdf#toolbar=0" width=840, height=1188 scrolling="no"></iframe>
+          </details>
+          <details>
+            <summary>Show the subject answers</summary>
+            <h4>I have everything except the answers (sad face</h4>
+          </details>
+          </div>  
+         </div>
+          </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        /**
+         * 动态创建iframe
+         * @param dom 创建iframe的容器，即在dom中创建iframe。dom可以是div、span或者其他标签。
+         * @param src iframe中打开的网页路径
+         * @param onload iframe加载完后触发该事件，可以为空
+         * @return 返回创建的iframe对象
+        */
+        function createIframe(dom, src, onload){
+          //在document中创建iframe
+          var iframe = document.createElement("iframe");
+          
+          //设置iframe的样式
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+          iframe.style.margin = '0';
+          iframe.style.padding = '0';
+          iframe.style.overflow = 'hidden';
+          iframe.style.border = 'none';
+          
+          //绑定iframe的onload事件
+          if(onload && Object.prototype.toString.call(onload) === '[object Function]'){
+            if(iframe.attachEvent){
+              iframe.attachEvent('onload', onload);
+            }else if(iframe.addEventListener){
+              iframe.addEventListener('load', onload);
+            }else{
+              iframe.onload = onload;
+            }
+          }
+          
+          iframe.src = src;
+          //把iframe加载到dom下面
+          dom.appendChild(iframe);
+          return iframe;
+        }
+        
+        /**
+        * 销毁iframe，释放iframe所占用的内存。
+        * @param iframe 需要销毁的iframe对象
+        */
+        function destroyIframe(iframe){
+          //把iframe指向空白页面，这样可以释放大部分内存。
+          iframe.src = 'about:blank';
+          try{
+            iframe.contentWindow.document.write('');
+            iframe.contentWindow.document.clear();
+          }catch(e){}
+          //把iframe从页面移除
+          iframe.parentNode.removeChild(iframe);
+        }
+
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+
+</html>
