@@ -4,6 +4,9 @@ For learning and communication only!
 
 Open source in accordance with MIT agreement
 
+Welcome to give some ideas to improve this project
+
+欢迎来提Issue
 ## Chinese 
 
 Totem是一个ReadingExplore阅读器，使用html语言编写
