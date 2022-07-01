@@ -1,5 +1,7 @@
 # Totem
 
+Not fully adapted to mobile
+
 For learning and communication only!
 
 Open source in accordance with MIT agreement
